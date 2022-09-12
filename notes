@@ -1,0 +1,27 @@
+To do list:
+
+To setup:
+
+- mkdir "foldername"
+- cd "foldername"
+- code .
+- install nvm
+- nvm install 16.14.2 (u can use nodejns already)
+- corepack enable (to enable yarn)
+- yarn add solc (solc is used to compile solidity files)
+- yarn solcjs --bin --abi --include-path node_modules/ --base-path . -o . SimpleStorage.sol (to compile soliditiy contracts)
+- yard add chai
+- yarn add solidity-coverage
+- yarn add dotenv
+- yarn add hardhat-gas-reporter
+- npm install --save-dev "@nomiclabs/hardhat-ethers@^2.0.0" "ethereum-waffle@^3.2.0" "ethers@^5.0.0" (if erroring)
+To deploy:
+
+- make sure to set ur private key, alchemy api, rinkedby api and coinmarketcap thingy in the .env file
+- yarn hardhat run scripts/deploy.js --network rinkeby
+yarn hardhat run scripts/deploy.js (for hardhat only)
+
+To test:
+- yarn hardhat test
+- yarn hardhat test --grep "tag"
+- indicated in hardhat config 
